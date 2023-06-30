@@ -1,0 +1,19 @@
+
+input {
+  font-size: 16px !important;
+}
+
+#map {
+    margin: 20px;
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+      background-color: #000000;
+      color: #ffffff;
+    }
+
+    p {
+        color: #ffffff;
+    }
+}
