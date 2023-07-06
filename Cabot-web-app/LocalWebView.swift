@@ -47,6 +47,7 @@ struct LocalWebView: UIViewRepresentable{
     }
 
     func makeUIView(context: UIViewRepresentableContext<LocalWebView>) -> WKWebView {
+        UIApplication.shared.isIdleTimerDisabled = true
         loadRequest(in: webview)
         return webview
     }

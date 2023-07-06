@@ -14,10 +14,15 @@
 
 <body>
   <p>
-    <input type="text" placeholder="ws://localhost:9091" id="hostText">
+    <input type="text" placeholder="ws://172.30.6.70:9091" id="hostText">
     <input type="button" value="Connection" id="ConnectionButton">
   </p>
-  <p id="msg"></p>
+  <table>
+    <tr>
+      <td id="help"> Two-finger map scrolling. </td>
+      <td id="msg"> </td>
+    </tr>
+  </table>
   <div id="map"></div>
 </body>
 
@@ -26,12 +31,21 @@
     * Setup all visualization elements when the page is loaded.
     */
     let hostText = document.getElementById('hostText');
-    hostText.value = "ws://localhost:9091";
+
+    const result = localStorage.getItem('rosHost');
+    if (result) {
+        hostText.value = result;
+    } else {
+        hostText.value = "ws://172.30.6.70:9091";
+    }
+
     let msg =  document.getElementById('msg');
     let ConnectionButton = document.getElementById('ConnectionButton');
     ConnectionButton.addEventListener('click', buttonClick);
 
     function buttonClick() {
+        localStorage.setItem('rosHost', hostText.value);
+
         // Connect to ROS.
         var ros = new ROSLIB.Ros({
             // set this to false to use the new service interface to
@@ -50,6 +64,7 @@
         ros.on('connection', function() {
             console.log('Connection made!');
             msg.innerText = 'Connection made!';
+            document.querySelector('#map').innerHTML = ``;
             topicInit(ros);
         });
 
@@ -67,8 +82,8 @@
         // Create the main viewer.
         var viewer = new ROS3D.Viewer({
             divID : 'map',
-            width : window.innerWidth * 1.5,
-            height : window.innerHeight * 0.8,
+            width : window.innerWidth * 3,
+            height : window.innerHeight * 2,
             background : '#808080',
             antialias : true,
             cameraPose : {x: 0, y: -1, z: 150}
