@@ -28,7 +28,7 @@ ROS3D.PoseLog = function(options) {
   this.color = options.color || 0xcc00ff;
   this.rootObject = options.rootObject || new THREE.Object3D();
 
-  this.sn = null;
+  this.poses = [];
 
   this.rosTopic = undefined;
   this.subscribe();
@@ -56,9 +56,9 @@ ROS3D.PoseLog.prototype.subscribe = function(){
 };
 
 ROS3D.PoseLog.prototype.processMessage = function(message){
-  if(this.sn!==null){
-      this.sn.unsubscribeTf();
-      this.rootObject.remove(this.sn);
+  for (let i = 0; i < this.poses.length - 1; i++) {
+      this.poses[i].unsubscribeTf();
+      this.rootObject.remove(this.poses[i]);
   }
 
   this.options.origin = new THREE.Vector3( message.pose.position.x, message.pose.position.y,
@@ -71,13 +71,14 @@ ROS3D.PoseLog.prototype.processMessage = function(message){
   this.options.material = new THREE.MeshBasicMaterial({color: this.color});
   var arrow = new ROS3D.Arrow(this.options);
 
-  this.sn = new ROS3D.SceneNode({
+  var node = new ROS3D.SceneNode({
       frameID : message.header.frame_id,
       tfClient : this.tfClient,
       object : arrow
   });
 
-  this.rootObject.add(this.sn);
+  this.poses.push(node);
+  this.rootObject.add(node);
 };
 
 
