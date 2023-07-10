@@ -56,9 +56,10 @@ ROS3D.PoseLog.prototype.subscribe = function(){
 };
 
 ROS3D.PoseLog.prototype.processMessage = function(message){
-  for (let i = 0; i < this.poses.length - 1; i++) {
-      this.poses[i].unsubscribeTf();
-      this.rootObject.remove(this.poses[i]);
+  if (this.poses.length > 1) {
+    this.poses[0].unsubscribeTf();
+    this.rootObject.remove(this.poses[0]);
+    this.poses.shift();
   }
 
   this.options.origin = new THREE.Vector3( message.pose.position.x, message.pose.position.y,
@@ -116,7 +117,7 @@ ROS3D.People = function(options) {
   this.subscribe();
 };
 
-	  
+
 ROS3D.People.prototype.__proto__ = THREE.Object3D.prototype;
 
 ROS3D.People.prototype.unsubscribe = function(){
@@ -146,7 +147,7 @@ ROS3D.People.prototype.processMessage = function(message){
 
   if (message.people.length > 0) {
       this.peoples = [];
-      
+
       message.people.forEach(person => {
           var sphereGeometry = new THREE.SphereGeometry( this.radius );
           var sphereMaterial = new THREE.MeshBasicMaterial( {color: this.color} );
@@ -162,6 +163,6 @@ ROS3D.People.prototype.processMessage = function(message){
           this.peoples.push(node);
           this.rootObject.add(node);
       });
-      
+
   }
 };
