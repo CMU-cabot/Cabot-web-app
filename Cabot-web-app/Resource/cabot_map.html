@@ -27,6 +27,10 @@
 </body>
 
 <script>
+    window.addEventListener("load", function() {
+       buttonClick();
+    });
+
     /**
     * Setup all visualization elements when the page is loaded.
     */
@@ -82,8 +86,8 @@
         // Create the main viewer.
         var viewer = new ROS3D.Viewer({
             divID : 'map',
-            width : window.innerWidth * 3,
-            height : window.innerHeight * 2,
+            width : window.innerWidth,
+            height : window.innerHeight,
             background : '#808080',
             antialias : true,
             cameraPose : {x: 0, y: -1, z: 150}
