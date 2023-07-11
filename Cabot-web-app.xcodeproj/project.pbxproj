@@ -15,16 +15,7 @@
 		E57808692A4D136C008E52DB /* Cabot_web_appUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E57808682A4D136C008E52DB /* Cabot_web_appUITests.swift */; };
 		E578086B2A4D136C008E52DB /* Cabot_web_appUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E578086A2A4D136C008E52DB /* Cabot_web_appUITestsLaunchTests.swift */; };
 		E57808782A4D23CB008E52DB /* LocalWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E57808772A4D23CB008E52DB /* LocalWebView.swift */; };
-		E578087B2A4D24DA008E52DB /* cabot_map.html in Resources */ = {isa = PBXBuildFile; fileRef = E578087A2A4D24DA008E52DB /* cabot_map.html */; };
-		E57808812A4D24EE008E52DB /* roslib.js in Resources */ = {isa = PBXBuildFile; fileRef = E578087D2A4D24ED008E52DB /* roslib.js */; };
-		E57808822A4D24EE008E52DB /* ros3d.js in Resources */ = {isa = PBXBuildFile; fileRef = E578087E2A4D24ED008E52DB /* ros3d.js */; };
-		E57808832A4D24EE008E52DB /* ros3d_cabot.js in Resources */ = {isa = PBXBuildFile; fileRef = E578087F2A4D24EE008E52DB /* ros3d_cabot.js */; };
-		E57808842A4D24EE008E52DB /* ros3d.min.js in Resources */ = {isa = PBXBuildFile; fileRef = E57808802A4D24EE008E52DB /* ros3d.min.js */; };
-		E57808882A4D2527008E52DB /* three.js in Resources */ = {isa = PBXBuildFile; fileRef = E57808852A4D2527008E52DB /* three.js */; };
-		E57808892A4D2527008E52DB /* three.min.js in Resources */ = {isa = PBXBuildFile; fileRef = E57808862A4D2527008E52DB /* three.min.js */; };
-		E578088D2A4D2541008E52DB /* eventemitter2.js in Resources */ = {isa = PBXBuildFile; fileRef = E578088B2A4D2541008E52DB /* eventemitter2.js */; };
-		E578088E2A4D2541008E52DB /* eventemitter2.min.js in Resources */ = {isa = PBXBuildFile; fileRef = E578088C2A4D2541008E52DB /* eventemitter2.min.js */; };
-		E57808902A4D2A43008E52DB /* cabot.css in Resources */ = {isa = PBXBuildFile; fileRef = E578088F2A4D2A2E008E52DB /* cabot.css */; };
+		E5F1C2442A5BFE4A00517626 /* Resource in Resources */ = {isa = PBXBuildFile; fileRef = E5F1C2432A5BFE4A00517626 /* Resource */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,16 +47,7 @@
 		E57808682A4D136C008E52DB /* Cabot_web_appUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cabot_web_appUITests.swift; sourceTree = "<group>"; };
 		E578086A2A4D136C008E52DB /* Cabot_web_appUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cabot_web_appUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		E57808772A4D23CB008E52DB /* LocalWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalWebView.swift; sourceTree = "<group>"; };
-		E578087A2A4D24DA008E52DB /* cabot_map.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = cabot_map.html; sourceTree = "<group>"; };
-		E578087D2A4D24ED008E52DB /* roslib.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = roslib.js; sourceTree = "<group>"; };
-		E578087E2A4D24ED008E52DB /* ros3d.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = ros3d.js; sourceTree = "<group>"; };
-		E578087F2A4D24EE008E52DB /* ros3d_cabot.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = ros3d_cabot.js; sourceTree = "<group>"; };
-		E57808802A4D24EE008E52DB /* ros3d.min.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = ros3d.min.js; sourceTree = "<group>"; };
-		E57808852A4D2527008E52DB /* three.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = three.js; sourceTree = "<group>"; };
-		E57808862A4D2527008E52DB /* three.min.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = three.min.js; sourceTree = "<group>"; };
-		E578088B2A4D2541008E52DB /* eventemitter2.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = eventemitter2.js; sourceTree = "<group>"; };
-		E578088C2A4D2541008E52DB /* eventemitter2.min.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = eventemitter2.min.js; sourceTree = "<group>"; };
-		E578088F2A4D2A2E008E52DB /* cabot.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = cabot.css; sourceTree = "<group>"; };
+		E5F1C2432A5BFE4A00517626 /* Resource */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Resource; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,8 +101,8 @@
 				E578084D2A4D136B008E52DB /* CabotWebApp.swift */,
 				E578084F2A4D136B008E52DB /* ContentView.swift */,
 				E57808772A4D23CB008E52DB /* LocalWebView.swift */,
-				E57808792A4D2411008E52DB /* Resource */,
 				E57808512A4D136C008E52DB /* Assets.xcassets */,
+				E5F1C2432A5BFE4A00517626 /* Resource */,
 				E57808532A4D136C008E52DB /* Preview Content */,
 			);
 			path = "Cabot-web-app";
@@ -149,39 +131,6 @@
 				E578086A2A4D136C008E52DB /* Cabot_web_appUITestsLaunchTests.swift */,
 			);
 			path = "Cabot-web-appUITests";
-			sourceTree = "<group>";
-		};
-		E57808792A4D2411008E52DB /* Resource */ = {
-			isa = PBXGroup;
-			children = (
-				E578087A2A4D24DA008E52DB /* cabot_map.html */,
-				E57808912A4D7F0D008E52DB /* css */,
-				E578087C2A4D24E2008E52DB /* js */,
-			);
-			path = Resource;
-			sourceTree = "<group>";
-		};
-		E578087C2A4D24E2008E52DB /* js */ = {
-			isa = PBXGroup;
-			children = (
-				E578087F2A4D24EE008E52DB /* ros3d_cabot.js */,
-				E578087E2A4D24ED008E52DB /* ros3d.js */,
-				E57808802A4D24EE008E52DB /* ros3d.min.js */,
-				E578087D2A4D24ED008E52DB /* roslib.js */,
-				E57808852A4D2527008E52DB /* three.js */,
-				E57808862A4D2527008E52DB /* three.min.js */,
-				E578088B2A4D2541008E52DB /* eventemitter2.js */,
-				E578088C2A4D2541008E52DB /* eventemitter2.min.js */,
-			);
-			path = js;
-			sourceTree = "<group>";
-		};
-		E57808912A4D7F0D008E52DB /* css */ = {
-			isa = PBXGroup;
-			children = (
-				E578088F2A4D2A2E008E52DB /* cabot.css */,
-			);
-			path = css;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -288,18 +237,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E57808902A4D2A43008E52DB /* cabot.css in Resources */,
-				E578088D2A4D2541008E52DB /* eventemitter2.js in Resources */,
-				E57808832A4D24EE008E52DB /* ros3d_cabot.js in Resources */,
-				E57808822A4D24EE008E52DB /* ros3d.js in Resources */,
+				E5F1C2442A5BFE4A00517626 /* Resource in Resources */,
 				E57808552A4D136C008E52DB /* Preview Assets.xcassets in Resources */,
-				E57808882A4D2527008E52DB /* three.js in Resources */,
-				E57808842A4D24EE008E52DB /* ros3d.min.js in Resources */,
 				E57808522A4D136C008E52DB /* Assets.xcassets in Resources */,
-				E578087B2A4D24DA008E52DB /* cabot_map.html in Resources */,
-				E57808812A4D24EE008E52DB /* roslib.js in Resources */,
-				E57808892A4D2527008E52DB /* three.min.js in Resources */,
-				E578088E2A4D2541008E52DB /* eventemitter2.min.js in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

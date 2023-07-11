@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="cabot.css">
+    <link rel="stylesheet" href="css/cabot.css">
 </head>
 
-<script src="three.min.js"></script>
-<script src="eventemitter2.min.js"></script>
-<script src="roslib.js"></script>
-<script src="ros3d.min.js"></script>
-<script src="ros3d_cabot.js"></script>
+<script src="js/three.min.js"></script>
+<script src="js/eventemitter2.min.js"></script>
+<script src="js/roslib.js"></script>
+<script src="js/ros3d.min.js"></script>
+<script src="js/ros3d_cabot.js"></script>
 
 <body>
   <p>
@@ -137,10 +137,10 @@
             tfClient : tfClient,
             rootObject : viewer.scene,
             color : 0xff0000,
-            length : 1.2,
-            headLength : 0.6,
-            shaftDiameter : 0.1,
-            headDiameter : 1.2
+            length : 2.0,
+            headLength : 1.0,
+            shaftDiameter : 0.5,
+            headDiameter : 1.5
         });
 
         // Setup the marker client.
