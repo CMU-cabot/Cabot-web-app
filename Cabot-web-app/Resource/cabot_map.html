@@ -14,8 +14,17 @@
 
 <body>
   <p>
-    <input type="text" placeholder="ws://172.30.6.70:9091" id="hostText">
+    <input type="text" id="hostText" list="ai_suitcase">
+    <datalist id="ai_suitcase">
+    <option value="ws://192.168.179.11:9091"></option>
+    <option value="ws://192.168.179.21:9091"></option>
+    <option value="ws://172.20.6.7:9091"></option>
+    <option value="ws://172.30.6.70:9091"></option>
+    <option value="ws://172.30.6.77:9091"></option>
+    </datalist>
+
     <input type="button" value="Connection" id="ConnectionButton">
+    <input type="button" value="Clear" id="ClearButton">
   </p>
   <table>
     <tr>
@@ -46,6 +55,13 @@
     let msg =  document.getElementById('msg');
     let ConnectionButton = document.getElementById('ConnectionButton');
     ConnectionButton.addEventListener('click', buttonClick);
+
+    let ClearButton = document.getElementById('ClearButton');
+    ClearButton.addEventListener('click', clearbuttonClick);
+
+    function clearbuttonClick() {
+       document.getElementById('hostText').value = '';
+    }
 
     function buttonClick() {
         localStorage.setItem('rosHost', hostText.value);

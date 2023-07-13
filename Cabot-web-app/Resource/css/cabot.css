@@ -1,8 +1,4 @@
 
-input {
-  font-size: 16px !important;
-}
-
 p, table {
     margin: 8px;
 }
@@ -13,6 +9,20 @@ body {
 
 #map {
     margin: 0px;
+}
+
+#hostText {
+  font-size: 18px !important;
+}
+
+#ConnectionButton {
+    font-size: 16px;
+    padding: 0px;
+}
+
+#ClearButton {
+    font-size: 16px;
+    padding: 0px;
 }
 
 #help {
